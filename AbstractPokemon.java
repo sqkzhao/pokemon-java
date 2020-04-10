@@ -1,0 +1,13 @@
+package com.kayz.pokemon;
+
+public abstract class AbstractPokemon implements PokemonInterface {
+	
+	public Pokemon createPokemon(String name, int health, String type) {
+		Pokemon p = new Pokemon(name, health, type);
+		return p;
+	}
+	
+	public String pokemonInfo(Pokemon pokemon) {
+		return String.format("Name: %s; Health: %d; Type: %s", pokemon.getName(), pokemon.getHealth(), pokemon.getType());
+	}
+}
